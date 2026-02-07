@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="et" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5 – Esimene leht</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+        <div class="container">
+<h1 class="mb-5">Värvid</h1>
+<div class="bg-primary text-white p-3">Põhitaust</div>
+<div class="bg-success text-white p-3">Õnnestumise taust</div>
+<div class="bg-warning text-dark p-3">Hoiatuse taust</div>
+<div class="bg-danger text-white p-3">Vea taust</div>
+<div class="bg-light text-dark p-3">Hele taust</div>
+<div class="bg-dark text-white p-3">Tume taust</div>
+
+<br><br>
+
+<button class="btn btn-primary">Primary</button> 
+<button class="btn btn-secondary">Secondary</button> 
+<button class="btn btn-success">Success</button> 
+<button class="btn btn-danger">Danger</button> 
+<button class="btn btn-warning">Warning</button> 
+<button class="btn btn-info">Info</button> 
+<button class="btn btn-light">Light</button> 
+<button class="btn btn-dark">Dark</button>
+
+<br><br>
+
+<button class="btn btn-outline-primary">Primary</button> 
+<button class="btn btn-outline-secondary">Secondary</button> 
+<button class="btn btn-outline-success">Success</button> 
+<button class="btn btn-outline-danger">Danger</button> 
+<button class="btn btn-outline-warning">Warning</button> 
+<button class="btn btn-outline-info">Info</button> 
+<button class="btn btn-outline-light text-secondary">Light</button> 
+<button class="btn btn-outline-dark">Dark</button>
+
+<br><br>
+
+<div class="border border-primary p-3 m-2">Primary äär</div>
+<div class="border border-danger p-3 m-2">Danger äär</div>
+<div class="border border-success p-3 m-2">Success äär</div>
+<div class="border border-warning p-3 m-2">Warning äär</div>
+<div class="border border-info p-3 m-2">Info äär</div>  
+<div class="border border-dark p-3 m-2">Dark äär</div>
+<div class="border border-light p-3 m-2">Light äär</div>
+
+<br><br>
+
+<a href="#" class="link-primary">Primary link</a><br>
+<a href="#" class="link-secondary">Secondary link</a><br>
+<a href="#" class="link-danger">Danger link</a><br>
+<a href="#" class="link-success">Success link</a><br>
+<a href="#" class="link-warning">Warning link</a><br>
+<a href="#" class="link-info">Info link</a><br>
+<a href="#" class="link-dark">Dark link</a><br>
+<a href="#" class="link-light">Light link</a><br>
+
+
+<br><br>
+
+<div class="container py-5">
+  <h1 class="text-primary">Pealkiri</h1>
+  <p class="text-secondary">Tekst kohandub vastavalt teemale</p>
+  <button class="btn btn-success">Nupp</button>
+</div>
+
+<br><br>
+
+<button id="themeToggle" class="btn btn-outline-secondary">
+  light/dark
+</button>
+
+<br><br>
+
+        </div>
+        <script>
+
+        const btn = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        btn.addEventListener('click', () => { 
+          const theme = html.getAttribute('data-bs-theme') || 'light'; 
+          html.setAttribute( 
+            'data-bs-theme', 
+            theme === 'dark' ? 'light' : 'dark'
+          );
+        });
+
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

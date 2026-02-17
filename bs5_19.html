@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="et">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 5 – Esimene leht</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Toast</h1>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+
+      <div id="liveToast" class="toast" role="alert">
+        <div class="toast-header">
+          <strong class="me-auto">Teade</strong>
+          <small>just nüüd</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+          Andmed on salvestatud.
+        </div>
+      </div>
+
+    </div>
+
+
+    <h1>Alert</h1>
+    <div class="container my-4">
+
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        See on ajutine hoiatus.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+
+      <div class="alert alert-secondary" role="alert"> Secondary – neutraalne lisainfo.</div>
+      <div class="alert alert-success" role="alert">Success – tegevus õnnestus.</div>
+      <div class="alert alert-danger" role="alert">Danger – viga või kriitiline probleem.</div>
+      <div class="alert alert-warning" role="alert">Warning – hoiatus või tähelepanu vajav info.</div>
+      <div class="alert alert-info" role="alert">Info – täiendav selgitus.</div>
+      <div class="alert alert-light" role="alert">Light – väga kerge taustaga teade.</div>
+      <div class="alert alert-dark" role="alert">Dark – tumeda taustaga teade.</div>
+
+    </div>
+
+
+
+    <h1>Akordion</h1>
+    <div class="accordion" id="faqAccordion">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Mis on Bootstrap?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Bootstrap on CSS- ja JS-raamistik, mis lihtsustab veebiliidese loomist.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Kas akordion vajab JavaScripti?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Jah. Akordion kasutab Bootstrapi Collapse JavaScripti.
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <h1>Pildivahetaja</h1>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="Pilt 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Esimene slaid</h5>
+            <p>Kampaania või oluline sõnum.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1200/500?random=2" class="d-block w-100" alt="Pilt 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Teine slaid</h5>
+            <p>Lisainfo või teine pakkumine.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1200/500?random=3" class="d-block w-100" alt="Pilt 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Kolmas slaid</h5>
+            <p>Kolmas oluline sõnum.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+
+  </div>
+  <script>
+    const toastEl = document.getElementById('liveToast');
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

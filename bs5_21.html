@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="et">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 5 – Esimene leht</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    .offcanvas {
+      width: 350px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Offcanvas</h1>
+    <p>Offcanvas on Bootstrapi komponent, mis võimaldab kuvada lehe küljel olevat navigatsioonipaneeli või teisi
+      elemente, mis on vaikimisi peidetud.</p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+      Ava offcanvas
+    </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" data-bs-backdrop="false" data-bs-scroll="true"
+      id="offcanvasExample">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menüü</h5> <button type="button" class="btn-close"
+          data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Avaleht</li>
+          <li class="list-group-item">Teenused</li>
+          <li class="list-group-item">Kontakt</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

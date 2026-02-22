@@ -7,25 +7,95 @@
   <title>Bootstrap 5 – Esimene leht</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 </head>
 
-<body>
-  <div class="container">
-    <h1>Toast</h1>
-    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
 
-      <div id="liveToast" class="toast" role="alert">
+<body>
+
+
+  <div class="container">
+    <h1>Modal</h1>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#infoModal">
+      Ava modal akna
+    </button>
+
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">Tere tulemast!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis fugit unde architecto, qui illo
+            voluptas veniam dolor nesciunt recusandae velit eius odio quasi! Eum facere impedit sequi non excepturi.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis fugit unde architecto, qui illo
+            voluptas veniam dolor nesciunt recusandae velit eius odio quasi! Eum facere impedit sequi non excepturi.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis fugit unde architecto, qui illo
+            voluptas veniam dolor nesciunt recusandae velit eius odio quasi! Eum facere impedit sequi non excepturi.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis fugit unde architecto, qui illo
+            voluptas veniam dolor nesciunt recusandae velit eius odio quasi! Eum facere impedit sequi non excepturi.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis fugit unde architecto, qui illo
+            voluptas veniam dolor nesciunt recusandae velit eius odio quasi! Eum facere impedit sequi non excepturi.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis fugit unde architecto, qui illo
+            voluptas veniam dolor nesciunt recusandae velit eius odio quasi! Eum facere impedit sequi non excepturi.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis fugit unde architecto, qui illo
+            voluptas veniam dolor nesciunt recusandae velit eius odio quasi! Eum facere impedit sequi non excepturi.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum facilis fugit unde architecto, qui illo
+            voluptas veniam dolor nesciunt recusandae velit eius odio quasi! Eum facere impedit sequi non excepturi.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sulge</button>
+            <button type="button" class="btn btn-primary">Salvesta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h1>Toast</h1>
+
+    <div class="container">
+      <h1 class="mb-4">Vormi salvestamine</h1>
+      <div class="mb-3">
+        <label class="form-label">Nimi</label><input type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">E-post</label><input type="email" class="form-control">
+      </div>
+      <button id="saveBtn" class="btn btn-success">
+        Salvesta andmed
+      </button>
+    </div>
+
+    <!-- Toasti asukoht -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="saveToast" class="toast align-items-center text-bg-success border-0" role="alert">
+        <div class="d-flex">
+          <div class="toast-body">
+            Andmed on edukalt salvestatud.
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="saveToast" class="toast" role="alert">
+
         <div class="toast-header">
           <strong class="me-auto">Teade</strong>
           <small>just nüüd</small>
           <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
         </div>
-        <div class="toast-body">
-          Andmed on salvestatud.
-        </div>
-      </div>
 
-    </div>
+        <div class="toast-body">
+          Andmed on edukalt salvestatud.
+        </div>
+
+      </div>
+    </div> -->
 
 
     <h1>Alert</h1>
@@ -130,14 +200,19 @@
     </div>
 
   </div>
-  <script>
-    const toastEl = document.getElementById('liveToast');
-    const toast = new bootstrap.Toast(toastEl);
-    toast.show();
-  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script>
+    const saveBtn = document.getElementById('saveBtn');
+    const toastEl = document.getElementById('saveToast');
+    const toast = new bootstrap.Toast(toastEl);
+
+    saveBtn.addEventListener('click', () => {
+      toast.show();
+    });
+  </script>
 </body>
 
 </html>
